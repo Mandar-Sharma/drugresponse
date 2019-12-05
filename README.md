@@ -21,7 +21,7 @@ The baseline for this project that we have used is a Deep Neural Network (DNN) w
 
 ### Baseline Evaluation Metrics
 <p align="center">
-  <img width="350" height="250" src="/images/DNN_metrics.png">
+  <img src="/images/DNN_metrics.png">
 </p>
 
 Explain how to run the automated tests for this system
