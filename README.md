@@ -28,13 +28,21 @@ The evaluation metrics used for both the baseline and the EC-Convolution are the
 Here, we can see that our baseline performs pretty well, with a high R2-Score of 94.3% when the 100% of the training data is used.
 
 ### Running the Baseline
-```
+```sh
 jupyter nbconvert --to python DNN_Baseline.ipynb
-
 ```
 ## Extracting Information from Protein-Protein and Drug-Protein Interaction Networks
 
 To this point, we have only used the drug dosage values and 'g' values to make predictions. As mentioned in the introduction, [1] offers resources for protein-protein interaction (PPI) and drug-protein interaction (DPI) networks. Thus, we utilize the DPI and PPI networks to extract embeddings for the drugs based on the structural properties of the DPI/PPI network. 
+
+For this, we use unsupervised graphSAGE [3] to extract the structural embeddings of the DPI and PPI network. Using undersupervised graphSAGE (with the StellarGraph library https://github.com/stellargraph/stellargraph), we learn 50 dimensional embeddings for each of the 7 drugs and the thousands of proteins in our network.
+
+Using, T-Distributed Stochastic Neighbouring Entities (t-SNE) plots, we can visualize the learned embeddings in two dimensions.
+
+<p align="center">
+  <img src="/images/embeddings.png">
+</p>
+
 
 ### And coding style tests
 
