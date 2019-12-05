@@ -111,3 +111,12 @@ jupyter nbconvert --to python EC_Convolution.ipynb
 ## Future Directions
 
 An important analysis that we could further do, is to use random noise (perhaps generated from some distribution), as edge features and run EC-CONV. If we get a reduced accuracy or increased error, we could confirm that what we extracted from the structural information of the DPI/PPI graphs is truly a signal and that EC-CONV is not generally a better model than a DNN.
+
+## References
+[1]  String protein interaction network.  https://string-db.org/.
+
+[2]  Justin  Gilmer,  Samuel  S.  Schoenholz,  Patrick  F.  Riley,  Oriol  Vinyals,  and  George  E.  Dahl.   Neural message passing for quantum chemistry. CoRR, abs/1704.01212, 2017.
+
+[3]  William L. Hamilton, Rex Ying, and Jure Leskovec.  Inductive representation learning on large graphs. CoRR, abs/1706.02216, 2017.
+
+[4]  Kevin  B.  Wood,  Satoshi  Nishida,  Eduardo  D.  Sontag,  and  Philippe  Cluzel.   Mechanism-independent method  for  predicting  response  to  multidrug  combinations  in  bacteria. Proceedings  of  the  NationalAcademy of Sciences of the United States of America, 109 30:12254–9, 2012.
