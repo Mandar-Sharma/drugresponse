@@ -22,7 +22,7 @@ The baseline for this project that we have used is a Deep Neural Network (DNN) w
 ### Baseline Evaluation Metrics
 The evaluation metrics used for both the baseline and the EC-Convolution are the MSE (Mean Square Error) and the R2-Score.
 <p align="center">
-  <img src="/images/DNN_metrics.png">
+  <img width="500" height="275" src="/images/DNN_metrics.png">
 </p>
 
 Here, we can see that our baseline performs pretty well, with a high R2-Score of 94.3% when the 100% of the training data is used.
@@ -40,7 +40,7 @@ For this, we use unsupervised graphSAGE [3] to extract the structural embeddings
 Using, T-Distributed Stochastic Neighbouring Entities (t-SNE) plots, we can visualize the learned embeddings in two dimensions.
 
 <p align="center">
-  <img src="/images/embeddings.png">
+  <img width="450" height="325" src="/images/embeddings.png">
 </p>
 
 We can see that the embeddings are forming clusters, hinting that the embeddings that we extracted may resemble neighborhoods in the PPI and DPI graphs. Now, through the implementation of unsupervised graphSAGE, we have 50 dimensional embeddings for each of the 7 drugs, which gives us additional information about the proteins they act on.
@@ -55,7 +55,7 @@ Now that we have established our baseline and have extracted embeddings for our 
 
 Each instance of our graph is as following:
 <p align="center">
-  <img src="/images/graph.png">
+  <img width="450" height="325" src="/images/graph.png">
 </p>
 
 Where, the nodes represent the 7 drugs. Each node feature is associated with an instance of the the training sample, such that the node features represent the drug dosage information. For singletons, only one of the 7 drugs will have a node feature associate with its dosage and the node features for the other drugs will be zero. The same protocol is followed for pairs and triplets of drugs.
