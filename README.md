@@ -14,8 +14,7 @@ The tabulated dataset is accessible under the /woodsdata folder in this reposito
 
 The baseline for this project that we have used is a Deep Neural Network (DNN) with 5 hidden layers with 50 nodes each. The dataset used for training/testing is a shuffled combination of Singletons, Pairs, and Triplets. The suffled set is split 50-50 for training and testing. We further test our model with 100%, 70%, and 30% of our training data respectively to see how it would perform under limited data constraints. We run our DNN for 500 epochs, and perform this iteration 10 times over to ensure that there are no flukes in our metrics.
 
-![DNN (True Values vs. Predicted Values](/images/dnn_tvsp.png){:height="700px" width="400px"}
-
+![DNN (True Values vs. Predicted Values](/images/dnn_tvsp.png)<!-- .element height="50%" width="50%" -->
 
 ## Running the tests
 
