@@ -25,15 +25,16 @@ The evaluation metrics used for both the baseline and the EC-Convolution are the
   <img src="/images/DNN_metrics.png">
 </p>
 
-Explain how to run the automated tests for this system
+Here, we can see that our baseline performs pretty well, with a high R2-Score of 94.3% when the 100% of the training data is used.
 
-### Break down into end to end tests
-
-Explain what these tests test and why
+### Running the Baseline
+```
+jupyter nbconvert --to python DNN_Baseline.ipynb
 
 ```
-Give an example
-```
+## Extracting Information from Protein-Protein and Drug-Protein Interaction Networks
+
+To this point, we have only used the drug dosage values and 'g' values to make predictions. As mentioned in the introduction, [1] offers resources for protein-protein interaction (PPI) and drug-protein interaction (DPI) networks. Thus, we utilize the DPI and PPI networks to extract embeddings for the drugs based on the structural properties of the DPI/PPI network. 
 
 ### And coding style tests
 
