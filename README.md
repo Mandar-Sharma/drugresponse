@@ -10,23 +10,12 @@ For this project, we utilize the dataset from [4] which consists of drugs Chlora
 
 The tabulated dataset is accessible under the /woodsdata folder in this repository.
 
-### Installing
+## Baseline (Deep Neural Network)
 
-A step by step series of examples that tell you how to get a development env running
+The baseline for this project that we have used is a Deep Neural Network (DNN) with 5 hidden layers with 50 nodes each. The dataset used for training/testing is a shuffled combination of Singletons, Pairs, and Triplets. The suffled set is split 50-50 for training and testing. We further test our model with 100%, 70%, and 30% of our training data respectively to see how it would perform under limited data constraints. We run our DNN for 500 epochs, and perform this iteration 10 times over to ensure that there are no flukes in our metrics.
 
-Say what the step will be
+![DNN (True Values vs. Predicted Values](/images/dnn_tvsp.png)
 
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
