@@ -4,6 +4,23 @@ Mandar Sharma
 
 This project, a continuation of my work with Dr. Anuj Karpatne and Md Abdullah Al Maruf, aims to use the drug-response data on bacterial cells [4] and attempts to utilize the drug-protein and protein-protein interaction networks extracted from [1] such that we could use state-of-the-art graph Machine Learning algorithms [2,3] that could help us better predict the drug-responses given the structural embeddings we learn through the protein interaction networks of the drugs. In essence, [4] and many others have attempted to predict drug-responses solely based on data from lab-based experiments without taking into consideration the fact that certain proteins that these drugs act on can give us valuable structural information that might help us make better predictions on the drug-responses.
 
+## Hardware/Software Development Environement
+
+This project was developed in a LINUX system and all the neural networks were run through a GPU cluster. The language used for development was Python 3.6. Please make sure that the following libraries are installed in your Python environment before running the code provided here.
+
+```sh
+keras
+pytorch
+pytorch-geometric
+stellargraph
+sklearn
+pandas
+numpy
+networkx
+pickle
+tqdm
+```
+
 ## Introduction to the Dataset
 
 For this project, we utilize the dataset from [4] which consists of drugs Chloramphenicol, Doxycycline, Erythromycin, Lincomycin, Ofloxacin, Salicylate, and Trimethoprim. Here, we refer to the effectiveness of a drug, given a certain dosage, as its 'g' value. The dataset, curated from [4], has been tabulated intro three forms: Singletons, Pairs, and Triplets of drugs. Each of these tabulations has the drug combinations, along with their dosage and 'g' values.
@@ -85,6 +102,11 @@ The evaluation metrics used for both the baseline and the EC-Convolution are the
 </p>
 
 Here, we can see that EC-CONV outperforms our baseline by a significant margin on all sizes of the training data. Thus, the structual embeddings learned from the DPI/PPI graph networks did help us enhance our predictions.
+
+### Running the EC-CONV
+```sh
+jupyter nbconvert --to python EC_Convolution.ipynb
+```
 
 ## Future Directions
 
