@@ -22,7 +22,7 @@ The baseline for this project that we have used is a Deep Neural Network (DNN) w
 ### Baseline Evaluation Metrics
 The evaluation metrics used for both the baseline and the EC-Convolution are the MSE (Mean Square Error) and the R2-Score.
 <p align="center">
-  <img width="500" height="275" src="/images/DNN_metrics.png">
+  <img width="500" height="175" src="/images/DNN_metrics.png">
 </p>
 
 Here, we can see that our baseline performs pretty well, with a high R2-Score of 94.3% when the 100% of the training data is used.
