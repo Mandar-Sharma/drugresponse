@@ -49,3 +49,17 @@ We can see that the embeddings are forming clusters, hinting that the embeddings
 ```sh
 jupyter nbconvert --to python graphSAGE/graphSAGE.ipynb
 ```
+## EC-Convolution for Graph-level Predictions
+
+Now that we have established our baseline and have extracted embeddings for our 7 drugs based on their DPI and PPI networks, now we can use the state-of-the-art graph classification algorithm EC-CONV [2] to make graph level predictions.
+
+Each instance of our graph is as following:
+<p align="center">
+  <img src="/images/graph.png">
+</p>
+
+Where, the nodes represent the 7 drugs. Each node feature is associated with an instance of the the training sample, such that the node features represent the drug dosage information. For singletons, only one of the 7 drugs will have a node feature associate with its dosage and the node features for the other drugs will be zero. The same protocol is followed for pairs and triplets of drugs.
+
+For the edge features, we use the Hadamard product of the learned embeddings for each drugs. Thus, we have a 50 dimensional edge feature for each edge in the graph.
+
+Finally, each instance of our graph will have an associated 'g' value for training.
