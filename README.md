@@ -2,17 +2,13 @@
 
 This project, a continuation of my work with Dr. Anuj Karpatne and Md Abdullah Al Maruf, aims to use the drug-response data on bacterial cells [4] and attempts to utilize the drug-protein and protein-protein interaction networks extracted from [1] such that we could use state-of-the-art graph Machine Learning algorithms [2,3] that could help us better predict the drug-responses given the structural embeddings we learn through the protein interaction networks of the drugs. In essence, [4] and many others have attempted to predict drug-responses solely based on data from lab-based experiments without taking into consideration the fact that certain proteins that these drugs act on can give us valuable structural information that might help us make better predictions on the drug-responses.
 
-## Introduction to the dataset
+## Introduction to the Dataset
 
-For this project, we utilize the dataset from [4] which consists of drugs Chloramphenicol, Doxycycline, Erythromycin, Lincomycin, Ofloxacin, Salicylate, and Trimethoprim. The dataset, curated from [4]
+For this project, we utilize the dataset from [4] which consists of drugs Chloramphenicol, Doxycycline, Erythromycin, Lincomycin, Ofloxacin, Salicylate, and Trimethoprim. Here, we refer to the effectiveness of a drug, given a certain dosage, as its 'g' value. The dataset, curated from [4], has been tabulated intro three forms: Singletons, Pairs, and Triplets of drugs. Each of these tabulations has the drug combinations, along with their dosage and 'g' values.
 
-### Prerequisites
+### Accessing the Dataset
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+The tabulated dataset is accessible under the /woodsdata folder in this repository.
 
 ### Installing
 
