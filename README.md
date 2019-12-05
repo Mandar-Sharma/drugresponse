@@ -2,9 +2,9 @@
 
 This project, a continuation of my work with Dr. Anuj Karpatne and Md Abdullah Al Maruf, aims to use the drug-response data on bacterial cells [4] and attempts to utilize the drug-protein and protein-protein interaction networks extracted from [1] such that we could use state-of-the-art graph Machine Learning algorithms [2,3] that could help us better predict the drug-responses given the structural embeddings we learn through the protein interaction networks of the drugs. In essence, [4] and many others have attempted to predict drug-responses solely based on data from lab-based experiments without taking into consideration the fact that certain proteins that these drugs act on can give us valuable structural information that might help us make better predictions on the drug-responses.
 
-## Getting Started
+## Introduction to the dataset
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+For this project, we utilize the dataset from [4] which consists of drugs Chloramphenicol, Doxycycline, Erythromycin, Lincomycin, Ofloxacin, Salicylate, and Trimethoprim. The dataset, curated from [4]
 
 ### Prerequisites
 
