@@ -1,4 +1,6 @@
-# Drug Response Project
+# CS5824: Drug Response Project
+
+Mandar Sharma
 
 This project, a continuation of my work with Dr. Anuj Karpatne and Md Abdullah Al Maruf, aims to use the drug-response data on bacterial cells [4] and attempts to utilize the drug-protein and protein-protein interaction networks extracted from [1] such that we could use state-of-the-art graph Machine Learning algorithms [2,3] that could help us better predict the drug-responses given the structural embeddings we learn through the protein interaction networks of the drugs. In essence, [4] and many others have attempted to predict drug-responses solely based on data from lab-based experiments without taking into consideration the fact that certain proteins that these drugs act on can give us valuable structural information that might help us make better predictions on the drug-responses.
 
@@ -82,4 +84,8 @@ The evaluation metrics used for both the baseline and the EC-Convolution are the
   <img width="500" height="125" src="/images/ECCONV_metrics.png">
 </p>
 
-Here, we can see that our baseline performs pretty well, with a high R2-Score of 94.3% when the 100% of the training data is used.
+Here, we can see that EC-CONV outperforms our baseline by a significant margin on all sizes of the training data. Thus, the structual embeddings learned from the DPI/PPI graph networks did help us enhance our predictions.
+
+## Future Directions
+
+An important analysis that we could further do, is to use random noise (perhaps generated from some distribution), as edge features and run EC-CONV. If we get a reduced accuracy or increased error, we could confirm that what we extracted from the structural information of the DPI/PPI graphs is truly a signal and that EC-CONV is not generally a better model than a DNN.
