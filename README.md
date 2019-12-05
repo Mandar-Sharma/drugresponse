@@ -63,3 +63,23 @@ Where, the nodes represent the 7 drugs. Each node feature is associated with an 
 For the edge features, we use the Hadamard product of the learned embeddings for each drugs. Thus, we have a 50 dimensional edge feature for each edge in the graph.
 
 Finally, each instance of our graph will have an associated 'g' value for training.
+
+We have used an EC-Convolution Network (EC-Conv) with 10 input channels and 10 output channels. The dataset used for training/testing, as same as the baseline, is a shuffled combination of Singletons, Pairs, and Triplets. The difference being that for EC-Conv, as described above, each data instance is represented as a graph with node features corresponding to the dosage values and each features corresponding to the learned DPI/PPI embeddings. The suffled set is split 50-50 for training and testing. We further test our model with 100%, 70%, and 30% of our training data respectively to see how it would perform under limited data constraints.
+
+### EC-Convolution (Training Loss)
+<p align="center">
+  <img width="450" height="325" src="/images/ECCONV_trainingloss.png">
+</p>
+
+### EC-Convolution (True Values vs. Predicted Values)
+<p align="center">
+  <img width="450" height="325" src="/images/ecconv_tvsp.png">
+</p>
+
+### EC-CONV Evaluation Metrics
+The evaluation metrics used for both the baseline and the EC-Convolution are the MSE (Mean Square Error) and the R2-Score.
+<p align="center">
+  <img width="500" height="175" src="/images/ECCONV_metrics.png">
+</p>
+
+Here, we can see that our baseline performs pretty well, with a high R2-Score of 94.3% when the 100% of the training data is used.
